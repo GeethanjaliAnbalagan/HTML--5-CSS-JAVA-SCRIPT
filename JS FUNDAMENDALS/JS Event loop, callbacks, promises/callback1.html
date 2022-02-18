@@ -1,0 +1,20 @@
+<html>
+    <p>An alternate way to implement above code is shown below with anonymous functions being</p>
+    <script>
+
+        // add() function is called with arguments a, b
+        // and callback, callback will be executed just
+        // after ending of add() function
+        function add(a, b , callback){
+        document.write(`The sum of ${a} and ${b} is ${a+b}.` +"<br>");
+        callback();
+        }
+        
+        // add() function is called with arguments given below
+        add(5,6,function disp(){
+        document.write('This must be printed after addition.');
+        });
+            
+        </script>
+        
+</html>
