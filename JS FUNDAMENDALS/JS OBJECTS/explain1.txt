@@ -1,0 +1,116 @@
+Objects: the basics
+--------------------------------------
+1. Objects
+2. Object references and copying
+3. Garbage collection
+4. Object methods, "this"
+5. Constructor, operator "new"
+6. Optional chaining operator'?.'
+7. Symbol type
+8. Object to primitive conversion
+---------------------------------------------------------------------------------------------------------------------
+1.Objects         -> 1. object literal           -> 2.object constructor using new
+
+	- An object can be created with figure brackets {…} with an optional list of properties. 
+	- A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
+	- Literals and properties
+	- Square brackets
+-----------------------------------------------------------------------------------------------------------------------
+2. Object references and copying
+	
+	- Object references and copying
+	- Comparison by reference
+	- Cloning and merging, Object.assign
+	- Nested cloning
+--------------------------------------------------------------------------------------------------------------------------
+3. Garbage collection 
+
+	- There’s a background process in the JavaScript engine that is called garbage collector. 
+	- It monitors all objects and removes those that have become unreachable.
+	
+	- Garbage collection is performed automatically. We cannot force or prevent it.
+	- Objects are retained in memory while they are reachable.
+	- Being referenced is not the same as being reachable (from a root):
+	  a pack of interlinked objects can become unreachable as a whole.
+--------------------------------------------------------------------------------------------------------------------------
+4. Object methods, "this"
+
+	- Functions that are stored in object properties are called “methods”.
+	- Methods allow objects to “act” like object.doSomething().
+	- Methods can reference the object as this.
+	- The value of this is defined at run-time.
+
+	- When a function is declared, it may use this, but that this has no value until the function is called.
+	- A function can be copied between objects.
+	- When a function is called in the “method” syntax: object.method(), the value of this during the call is object.
+------------------------------------------------------------------------------------------------------------------------------
+5. Constructor, operator "new"
+
+	- Constructor function
+		-Constructor functions technically are regular functions. There are two conventions though:
+
+			.. They are named with capital letter first.
+			.. They should be executed only with "new" operator.
+-------------------------------------------------------------------------------------------------------------------------------
+6. Optional chaining '?.'
+
+	- The optional chaining operator (?.) allows you to access the value of a property located deep within a chain of objects 
+	  without explicitly checking if each reference in the chain is null or undefined.
+
+	- If one of the references in the chain is null or undefined, the optional chaining operator (?.)
+	  will short circuit and return undefined.
+-----------------------------------------------------------------------------------------------------------------------------
+7. Symbol type
+
+	- ES6 added Symbol as a new primitive type. Unlike other primitive types such as number, boolean, null, undefined, and string, the symbol type doesn’t have a literal form.
+
+	- To create a new symbol, you use the global Symbol() function as shown in this example:
+
+		let s = Symbol('foo');
+	
+	- The Symbol() function creates a new unique value each time you call it:
+
+	- console.log(Symbol() === Symbol()); // false
+
+Sharing symbols
+
+ES6 provides you with the global symbol registry that allows you to share symbols globally. If you want to create a symbol that will be shared, you use the Symbol.for() method instead of calling the Symbol() function.
+
+The Symbol.for() method accepts a single parameter that can be used for symbol’s description, as shown in the following example:
+
+	- Symbol usages
+		A) Using symbols as unique values
+		B) Using symbol as the computed property name of an object
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+8. Object to primitive conversion
+
+
+
+
+person()------person1----Adding propert,method
+        ------person2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

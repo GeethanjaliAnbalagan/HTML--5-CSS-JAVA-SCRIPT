@@ -1,0 +1,75 @@
+var person = { fname:"John", lname:"Doe", age:25 }; 
+var personProps = Object.keys(person);
+for(var i = 0; i < personProps.length; i++){
+    var key = personProps[i];
+    var value = person[key];
+    console.log(key + " : " + value);
+}
+------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script src="app.js"></script>
+</body>
+</html>
+
+
+if(parseInt(s)%2==0){
+    
+    document.write("Even number");
+            }
+    else{
+    
+    document.write("Odd number");
+    }
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Read Text File</title>
+</head>
+
+<body>
+	<input type="file" name="inputfile"
+			id="inputfile">
+	<br>
+
+	<pre id="output"></pre>
+	
+	<script type="text/javascript">
+		document.getElementById('inputfile')
+			.addEventListener('change', function() {
+			
+			var fr=new FileReader();
+			fr.onload=function(){
+				document.getElementById('output')
+						.textContent=fr.result;
+                    
+			}
+			
+			fr.readAsText(this.files[0]);
+           var s = parseInt(fr.readAsText(this.files[0]));
+           document.write(s);
+            if(parseInt(fr.readAsText(this.files[0]))%2==0){
+    
+    document.write("Even number");
+            }
+    else{
+    
+    document.write("Odd number");
+    }
+            
+            
+		})
+        
+        
+	</script>
+</body>
+
+</html>
